@@ -4,7 +4,7 @@ Simple Star Rating
 A simple star rating library
 
 ### Running 
-```
+```html
 <div id="myStarRate"></div>
 
 <script>
@@ -13,6 +13,7 @@ A simple star rating library
     });
 </script>
 
-### License
+```
 
+### License
 This project is licensed under the MIT - see the [LICENSE](LICENSE) file for details
