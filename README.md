@@ -1,3 +1,5 @@
+<img src="assets/star.png" align="right" height="40" />
+
 Simple Star Rating
 ==========
 
