@@ -4,10 +4,7 @@
 
     var Rate = (function () {
         
-        var _starModel = {
-            on: '&#9733',
-            off: '&#9734'
-        };
+        var _starModel = '&#9733';
 
         var _events = [
             'click',
@@ -129,7 +126,7 @@
             for (var i = 0; i < this.config.stars; ++i) {
                 var star = document.createElement('span');
 
-                star.innerHTML = _starModel.on;
+                star.innerHTML = _starModel;
 
                 star.style.color = this.config.style['star-on'];
                 star.style.fontSize = this.config.style['star-size'];
