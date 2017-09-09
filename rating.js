@@ -88,11 +88,8 @@
                 rate = parseInt(target.getAttribute('data-rate')),
                 stars = document.getElementsByClassName('star-rating');
             
-            var t = target.getAttribute('mark');
-            if (t != null) {
-                console.log(t);   
-                return;
-            }
+            if (target.getAttribute('mark') != null) return;
+
             for (var i = 0; i < stars.length; ++i) {
                 var rating = parseInt(stars[i].getAttribute('data-rate'));
                 if (rating > rate) {
