@@ -24,7 +24,7 @@
         };
     
         function Rate(config) {
-            this.config = _defaultConfig;
+            this.config = JSON.parse(JSON.stringify(_defaultConfig));
             this.init(config);
         }
     
@@ -48,7 +48,7 @@
             var rate = parseInt(this.config.rate);
             if (rate !== 'undefined') {
                 var found = false;
-                var stars = document.getElementsByClassName('star-rating');
+                var stars = document.querySelectorAll(`#${this.config.target} .star-rating`);
 
                 for (var i = 0; i < stars.length; ++i) {
                     var rating = parseInt(stars[i].getAttribute('data-rate'));
@@ -86,7 +86,7 @@
             var target = e.target,
                 callback = this.config.mouseover,
                 rate = parseInt(target.getAttribute('data-rate')),
-                stars = document.getElementsByClassName('star-rating');
+                stars = document.querySelectorAll(`#${this.config.target} .star-rating`)
             
             if (target.getAttribute('mark') != null) return;
 
@@ -105,7 +105,7 @@
             e.preventDefault();
             var target = e.target,
                 callback = this.config.mouseout,
-                stars = document.getElementsByClassName('star-rating');
+                stars = document.querySelectorAll(`#${this.config.target} .star-rating`)
             
             for (var i = 0; i < stars.length; ++i) {
                 stars[i].style.color = this.config.style['star-on'];
